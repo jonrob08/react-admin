@@ -3,6 +3,7 @@ import { createTheme } from "@mui/material/styles";
 
 // color design tokens
 export const tokens = (mode) => ({
+    // if mode = dark { dark mode } 
     ...(mode === "dark" 
     ? {
         grey: {
@@ -60,6 +61,7 @@ export const tokens = (mode) => ({
             800: "#2a2d64",
             900: "#151632"
         },
+        // elseif - light mode
     } : {
         grey: {
             100: "#141414",
@@ -120,6 +122,7 @@ export const tokens = (mode) => ({
 })
 
 // mui theme settings
+// https://mui.com/joy-ui/customization/theme-tokens/#global-variant-tokens
 export const themeSettings = (mode) => {
     const colors = tokens(mode)
 
@@ -204,6 +207,7 @@ export const useMode = () => {
     const colorMode = useMemo(
         () => ({
             toggleColorMode: () => 
+            // https://medium.com/@matthew.holman/react-hooks-usestate-41ff1bf82dd
                 setMode((prev) => (prev === "light" ? "dark" : "light"))
         }),
         []
