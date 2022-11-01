@@ -83,9 +83,9 @@ const Calendar = () => {
                         listPlugin
                     ]}
                     headerToolbar={{
-                        left: "prev, next today",
+                        left: "prev,next today",
                         center: "title",
-                        right: "dayGridMonth, timeGridWeek, timeGridDay, listMonth"
+                        right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth"
                     }}
                     initialView="dayGridMonth"
                     editable={true}
@@ -94,7 +94,11 @@ const Calendar = () => {
                     dayMaxEvents={true}
                     select={handleDateClick}
                     eventClick={handleEventClick}
-                    
+                    eventsSet={(events) => setCurrentEvents(events)}
+                    initialEvents={[
+                        { id: "1", title: "All Day Event", date: "2022-11-14" },
+                        { id: "2", title: "Timed Event", date: "2022-11-20" },
+                    ]}
                 />
             </Box>
         </Box>
