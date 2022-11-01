@@ -328,6 +328,8 @@ export const mockBarData = [
     kebabColor: "hsl(97, 70%, 50%)",
     donut: 140,
     donutColor: "hsl(340, 70%, 50%)",
+    fries: 20,
+    friesColor: "hsl(125, 70%, 50%)", 
   },
   {
     country: "AE",
@@ -1238,7 +1240,8 @@ export const mockGeographyData = [
   },
   {
     id: "USA",
-    value: 658725,
+    value: 10000000,
+    label: "USA"
   },
   {
     id: "UZB",
